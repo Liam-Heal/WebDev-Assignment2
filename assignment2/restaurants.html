@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurants | MelbEats</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+
+    <header>
+        <div class="header-inner">
+            <div class="site-logo">MelbEats</div>
+            <p class="header-tagline">Find and book restaurants in Melbourne</p>
+        </div>
+    </header>
+
+    <!-- navigation -->
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="restaurants.html" class="active">Restaurants</a></li>
+            <li><a href="recommend.html">Recommend</a></li>
+            <li><a href="reservation.html">Reserve</a></li>
+            <li><a href="register.html">Register</a></li>
+        </ul>
+    </nav>
+
+    <main>
+
+        <article>
+
+            <!-- page intro -->
+            <section id="restaurants-intro">
+                <h1>Restaurants</h1>
+                <hr />
+                <p>
+                    Six restaurants available on MelbEats. Each listing includes the cuisine type, signature dishes, price range, and deposit amount required for a reservation.
+                </p>
+            </section>
+
+            <hr />
+
+            <!-- restaurant 1 -->
+            <section id="restaurant-1" class="restaurant-card">
+                <h2>Sakura Japanese Kitchen</h2>
+                <p class="cuisine-tag">Japanese</p>
+
+                <figure>
+                    <img src="images/image2.jpg" alt="Sushi and sashimi platter at Sakura Japanese Kitchen" class="page-image restaurant-image" />
+                </figure>
+
+                <p>
+                    Sakura is a mid-range Japanese restaurant in Fitzroy specialising in sushi, sashimi, and hot dishes. The menu covers most Japanese staples and the quality is consistent. Good option for both casual dinners and group bookings.
+                </p>
+
+                <table class="restaurant-table">
+                    <thead>
+                        <tr>
+                            <th>Signature Dish</th>
+                            <th>Price</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Sashimi Platter (12 pieces)</td>
+                            <td>$28</td>
+                        </tr>
+                        <tr>
+                            <td>Chicken Karaage</td>
+                            <td>$18</td>
+                        </tr>
+                        <tr>
+                            <td>Tonkotsu Ramen</td>
+                            <td>$22</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <ul class="restaurant-details">
+                    <li>Average price per person: $35–$50</li>
+                    <li>Deposit for reservation: $20</li>
+                    <li>Dietary options: Gluten-free available</li>
+                </ul>
+
+                <a href="reservation.html?restaurant=Sakura+Japanese+Kitchen" class="reserve-btn">Reserve a Table</a>
+            </section>
+
+            <hr />
+
+            <!-- restaurant 2 -->
+            <section id="restaurant-2" class="restaurant-card">
+                <h2>Tandoor House</h2>
+                <p class="cuisine-tag">Indian</p>
+
+                <figure>
+                    <img src="images/image3.jpg" alt="Butter chicken and naan bread at Tandoor House" class="page-image restaurant-image" />
+                </figure>
+
+                <p>
+                    Tandoor House is a halal Indian restaurant in the CBD. The menu focuses on North Indian cuisine with a range of curries, tandoor dishes, and breads. Portions are generous and prices are reasonable. Popular with families and groups.
+                </p>
+
+                <table class="restaurant-table">
+                    <thead>
+                        <tr>
+                            <th>Signature Dish</th>
+                            <th>Price</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Butter Chicken</td>
+                            <td>$24</td>
+                        </tr>
+                        <tr>
+                            <td>Lamb Rogan Josh</td>
+                            <td>$26</td>
+                        </tr>
+                        <tr>
+                            <td>Garlic Naan</td>
+                            <td>$5</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <ul class="restaurant-details">
+                    <li>Average price per person: $25–$40</li>
+                    <li>Deposit for reservation: $15</li>
+                    <li>Dietary options: Halal certified, vegetarian options available</li>
+                </ul>
+
+                <a href="reservation.html?restaurant=Tandoor+House" class="reserve-btn">Reserve a Table</a>
+            </section>
+
+            <hr />
+
+            <!-- restaurant 3 -->
+            <section id="restaurant-3" class="restaurant-card">
+                <h2>Green Bowl</h2>
+                <p class="cuisine-tag">Vegan / Vegetarian</p>
+
+                <figure>
+                    <img src="images/image4.jpg" alt="Colourful vegan grain bowl at Green Bowl restaurant" class="page-image restaurant-image" />
+                </figure>
+
+                <p>
+                    Green Bowl is a fully plant-based restaurant in Collingwood. The menu changes seasonally and focuses on whole ingredients. Everything on the menu is vegan. Good for people with dietary restrictions or anyone looking for a lighter meal.
+                </p>
+
+                <table class="restaurant-table">
+                    <thead>
+                        <tr>
+                            <th>Signature Dish</th>
+                            <th>Price</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Roasted Veggie Grain Bowl</td>
+                            <td>$20</td>
+                        </tr>
+                        <tr>
+                            <td>Mushroom and Lentil Burger</td>
+                            <td>$18</td>
+                        </tr>
+                        <tr>
+                            <td>Coconut Curry with Rice</td>
+                            <td>$19</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <ul class="restaurant-details">
+                    <li>Average price per person: $20–$35</li>
+                    <li>Deposit for reservation: $10</li>
+                    <li>Dietary options: Fully vegan, gluten-free options available</li>
+                </ul>
+
+                <a href="reservation.html?restaurant=Green+Bowl" class="reserve-btn">Reserve a Table</a>
+            </section>
+
+            <hr />
+
+            <!-- restaurant 4 -->
+            <section id="restaurant-4" class="restaurant-card">
+                <h2>The Steak Room</h2>
+                <p class="cuisine-tag">Steakhouse</p>
+
+                <figure>
+                    <img src="images/image5.jpg" alt="Grilled ribeye steak with sides at The Steak Room" class="page-image restaurant-image" />
+                </figure>
+
+                <p>
+                    The Steak Room is an upmarket steakhouse in Southbank. It focuses on Australian beef with a range of cuts and cooking styles. The wine list is extensive. Better suited to business dinners or special occasions given the price point.
+                </p>
+
+                <table class="restaurant-table">
+                    <thead>
+                        <tr>
+                            <th>Signature Dish</th>
+                            <th>Price</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>300g Ribeye</td>
+                            <td>$55</td>
+                        </tr>
+                        <tr>
+                            <td>Wagyu Beef Tenderloin</td>
+                            <td>$75</td>
+                        </tr>
+                        <tr>
+                            <td>Truffle Mashed Potato</td>
+                            <td>$14</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <ul class="restaurant-details">
+                    <li>Average price per person: $70–$120</li>
+                    <li>Deposit for reservation: $40</li>
+                    <li>Dietary options: Gluten-free available on request</li>
+                </ul>
+
+                <a href="reservation.html?restaurant=The+Steak+Room" class="reserve-btn">Reserve a Table</a>
+            </section>
+
+            <hr />
+
+            <!-- restaurant 5 -->
+            <section id="restaurant-5" class="restaurant-card">
+                <h2>Pho Saigon</h2>
+                <p class="cuisine-tag">Vietnamese</p>
+
+                <figure>
+                    <img src="images/image6.jpg" alt="Large bowl of beef pho at Pho Saigon" class="page-image restaurant-image" />
+                </figure>
+
+                <p>
+                    Pho Saigon is a Vietnamese restaurant in Richmond on Victoria Street. The menu covers pho, banh mi, rice dishes, and vermicelli bowls. Affordable and quick. One of the better options in the area for a filling meal without spending much.
+                </p>
+
+                <table class="restaurant-table">
+                    <thead>
+                        <tr>
+                            <th>Signature Dish</th>
+                            <th>Price</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Beef Pho (large)</td>
+                            <td>$17</td>
+                        </tr>
+                        <tr>
+                            <td>Lemongrass Chicken Rice</td>
+                            <td>$16</td>
+                        </tr>
+                        <tr>
+                            <td>Prawn Spring Rolls</td>
+                            <td>$12</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <ul class="restaurant-details">
+                    <li>Average price per person: $15–$25</li>
+                    <li>Deposit for reservation: $10</li>
+                    <li>Dietary options: Vegetarian pho available, gluten-free rice dishes</li>
+                </ul>
+
+                <a href="reservation.html?restaurant=Pho+Saigon" class="reserve-btn">Reserve a Table</a>
+            </section>
+
+            <hr />
+
+            <!-- restaurant 6 -->
+            <section id="restaurant-6" class="restaurant-card">
+                <h2>Lupa Trattoria</h2>
+                <p class="cuisine-tag">Italian</p>
+
+                <figure>
+                    <img src="images/image7.jpg" alt="Pasta and wood-fired pizza at Lupa Trattoria" class="page-image restaurant-image" />
+                </figure>
+
+                <p>
+                    Lupa Trattoria is an Italian restaurant in Carlton. The menu covers pasta, pizza, and classic mains. The space is casual but the food is well made. A good option for families or anyone wanting a reliable Italian meal at a reasonable price.
+                </p>
+
+                <table class="restaurant-table">
+                    <thead>
+                        <tr>
+                            <th>Signature Dish</th>
+                            <th>Price</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Spaghetti Carbonara</td>
+                            <td>$24</td>
+                        </tr>
+                        <tr>
+                            <td>Margherita Pizza</td>
+                            <td>$20</td>
+                        </tr>
+                        <tr>
+                            <td>Tiramisu</td>
+                            <td>$12</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <ul class="restaurant-details">
+                    <li>Average price per person: $30–$50</li>
+                    <li>Deposit for reservation: $20</li>
+                    <li>Dietary options: Vegetarian options available</li>
+                </ul>
+
+                <a href="reservation.html?restaurant=Lupa+Trattoria" class="reserve-btn">Reserve a Table</a>
+            </section>
+
+        </article>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 MelbEats | Swinburne University of Technology | COS10005 Web Development</p>
+        <nav class="footer-nav">
+            <a href="index.html">Home</a> |
+            <a href="restaurants.html">Restaurants</a> |
+            <a href="recommend.html">Recommend</a> |
+            <a href="reservation.html">Reserve</a> |
+            <a href="register.html">Register</a>
+        </nav>
+    </footer>
+
+</body>
+</html>
