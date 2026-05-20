@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bill Calculator | MelbEats</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+
+    <header>
+        <div class="header-inner">
+            <div class="site-logo">MelbEats</div>
+            <p class="header-tagline">Find and book restaurants in Melbourne</p>
+        </div>
+    </header>
+
+    <!-- navigation -->
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="restaurants.html">Restaurants</a></li>
+            <li><a href="recommend.html">Recommend</a></li>
+            <li><a href="reservation.html">Reserve</a></li>
+            <li><a href="register.html">Register</a></li>
+        </ul>
+    </nav>
+
+    <main>
+
+        <article>
+
+            <!-- page intro -->
+            <section id="bill-intro">
+                <h1>Estimated Bill Calculator</h1>
+                <hr />
+                <p>
+                    Use this tool to get a rough estimate of what a meal might cost based on the restaurant and group size. The estimate is based on the average price per person for each restaurant. It also shows the deposit required.
+                </p>
+            </section>
+
+            <hr />
+
+            <!-- calculator -->
+            <section id="bill-calculator">
+                <h2>Calculate</h2>
+
+                <div class="form-group">
+                    <label for="bill-restaurant">Select a restaurant:</label>
+                    <select id="bill-restaurant" name="bill-restaurant" onchange="updateBillEstimate()">
+                        <option value="">Select a restaurant</option>
+                        <option value="sakura" data-min="35" data-max="50" data-deposit="20">Sakura Japanese Kitchen</option>
+                        <option value="tandoor" data-min="25" data-max="40" data-deposit="15">Tandoor House</option>
+                        <option value="greenbowl" data-min="20" data-max="35" data-deposit="10">Green Bowl</option>
+                        <option value="steakroom" data-min="70" data-max="120" data-deposit="40">The Steak Room</option>
+                        <option value="phosaigon" data-min="15" data-max="25" data-deposit="10">Pho Saigon</option>
+                        <option value="lupa" data-min="30" data-max="50" data-deposit="20">Lupa Trattoria</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="bill-people">Number of people:</label>
+                    <input type="number" id="bill-people" name="bill-people" min="1" value="2" oninput="updateBillEstimate()" />
+                </div>
+
+                <!-- result - updated dynamically -->
+                <div id="billResult" class="result-box hidden">
+                    <h3>Estimated Total</h3>
+                    <p id="billMin"></p>
+                    <p id="billMax"></p>
+                    <p id="billDeposit"></p>
+                </div>
+
+            </section>
+
+        </article>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 MelbEats | Swinburne University of Technology | COS10005 Web Development</p>
+        <nav class="footer-nav">
+            <a href="index.html">Home</a> |
+            <a href="restaurants.html">Restaurants</a> |
+            <a href="recommend.html">Recommend</a> |
+            <a href="reservation.html">Reserve</a> |
+            <a href="register.html">Register</a>
+        </nav>
+    </footer>
+
+</body>
+</html>
