@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recommend | MelbEats</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+
+    <header>
+        <div class="header-inner">
+            <div class="site-logo">MelbEats</div>
+            <p class="header-tagline">Find and book restaurants in Melbourne</p>
+        </div>
+    </header>
+
+    <!-- navigation -->
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="restaurants.html">Restaurants</a></li>
+            <li><a href="recommend.html" class="active">Recommend</a></li>
+            <li><a href="reservation.html">Reserve</a></li>
+            <li><a href="register.html">Register</a></li>
+        </ul>
+    </nav>
+
+    <main>
+
+        <article>
+
+            <!-- page intro -->
+            <section id="recommend-intro">
+                <h1>Get a Recommendation</h1>
+                <hr />
+                <p>
+                    Answer the three questions below and the form will match you to a restaurant from the list. Once you get a result you can go straight to the reservation page from there.
+                </p>
+            </section>
+
+            <hr />
+
+            <!-- recommendation form -->
+            <section id="recommend-form">
+                <h2>Your Preferences</h2>
+
+                <form id="recommendForm">
+
+                    <fieldset>
+                        <legend>Dietary Preference</legend>
+                        <div class="form-group">
+                            <label for="dietary">Dietary requirement:</label>
+                            <select id="dietary" name="dietary">
+                                <option value="">Select one</option>
+                                <option value="none">None</option>
+                                <option value="vegan">Vegan</option>
+                                <option value="halal">Halal</option>
+                                <option value="glutenfree">Gluten-free</option>
+                            </select>
+                        </div>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Budget</legend>
+                        <div class="form-group">
+                            <label for="budget">Budget per person:</label>
+                            <select id="budget" name="budget">
+                                <option value="">Select one</option>
+                                <option value="low">Under $30</option>
+                                <option value="mid">$30–$60</option>
+                                <option value="high">Over $60</option>
+                            </select>
+                        </div>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Dining Purpose</legend>
+                        <div class="form-group">
+                            <label for="purpose">Occasion:</label>
+                            <select id="purpose" name="purpose">
+                                <option value="">Select one</option>
+                                <option value="family">Family</option>
+                                <option value="date">Date</option>
+                                <option value="business">Business</option>
+                                <option value="casual">Casual</option>
+                            </select>
+                        </div>
+                    </fieldset>
+
+                    <div class="form-group">
+                        <input type="button" value="Get Recommendation" id="recommendBtn" onclick="getRecommendation()" />
+                    </div>
+
+                </form>
+            </section>
+
+            <hr />
+
+            <!-- recommendation result -->
+            <section id="recommend-result">
+                <h2>Result</h2>
+                <div id="resultBox" class="result-box hidden">
+                    <p id="resultText"></p>
+                    <a id="resultLink" href="#" class="reserve-btn">Reserve at this Restaurant</a>
+                </div>
+                <p id="noResult" class="hidden">No match found for your selections. Try adjusting your preferences.</p>
+            </section>
+
+        </article>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 MelbEats | Swinburne University of Technology | COS10005 Web Development</p>
+        <nav class="footer-nav">
+            <a href="index.html">Home</a> |
+            <a href="restaurants.html">Restaurants</a> |
+            <a href="recommend.html">Recommend</a> |
+            <a href="reservation.html">Reserve</a> |
+            <a href="register.html">Register</a>
+        </nav>
+    </footer>
+
+</body>
+</html>

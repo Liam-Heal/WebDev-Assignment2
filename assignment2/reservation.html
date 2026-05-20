@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservation | MelbEats</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+
+    <header>
+        <div class="header-inner">
+            <div class="site-logo">MelbEats</div>
+            <p class="header-tagline">Find and book restaurants in Melbourne</p>
+        </div>
+    </header>
+
+    <!-- navigation -->
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="restaurants.html">Restaurants</a></li>
+            <li><a href="recommend.html">Recommend</a></li>
+            <li><a href="reservation.html" class="active">Reserve</a></li>
+            <li><a href="register.html">Register</a></li>
+        </ul>
+    </nav>
+
+    <main>
+
+        <article>
+
+            <!-- page intro -->
+            <section id="reservation-intro">
+                <h1>Make a Reservation</h1>
+                <hr />
+                <p>
+                    Fill out the form below to reserve a table. A deposit is required to confirm your booking. The deposit amount updates automatically based on the restaurant you select.
+                </p>
+            </section>
+
+            <hr />
+
+            <!-- reservation form -->
+            <section id="reservation-form">
+
+                <form id="reservationForm" action="http://mercury.swin.edu.au/it000000/cos10005/regtest.php" method="post" onsubmit="return validateReservation()">
+
+                    <fieldset>
+                        <legend>Your Details</legend>
+
+                        <div class="form-group">
+                            <label for="fullname">Full Name:</label>
+                            <input type="text" id="fullname" name="fullname" placeholder="Full name" />
+                            <span class="error-msg" id="fullnameError"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="res-email">Email Address:</label>
+                            <input type="text" id="res-email" name="res-email" placeholder="your@email.com" />
+                            <span class="error-msg" id="resEmailError"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="res-phone">Phone Number:</label>
+                            <input type="text" id="res-phone" name="res-phone" placeholder="Digits only, min 10 digits" />
+                            <span class="error-msg" id="resPhoneError"></span>
+                        </div>
+
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Booking Details</legend>
+
+                        <div class="form-group">
+                            <label for="restaurant">Restaurant:</label>
+                            <select id="restaurant" name="restaurant" onchange="updateDeposit()">
+                                <option value="">Select a restaurant</option>
+                                <option value="Sakura Japanese Kitchen" data-deposit="20">Sakura Japanese Kitchen — $20 deposit</option>
+                                <option value="Tandoor House" data-deposit="15">Tandoor House — $15 deposit</option>
+                                <option value="Green Bowl" data-deposit="10">Green Bowl — $10 deposit</option>
+                                <option value="The Steak Room" data-deposit="40">The Steak Room — $40 deposit</option>
+                                <option value="Pho Saigon" data-deposit="10">Pho Saigon — $10 deposit</option>
+                                <option value="Lupa Trattoria" data-deposit="20">Lupa Trattoria — $20 deposit</option>
+                            </select>
+                            <span class="error-msg" id="restaurantError"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="res-date">Reservation Date and Time:</label>
+                            <input type="datetime-local" id="res-date" name="res-date" />
+                            <span class="error-msg" id="resDateError"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="people">Number of People:</label>
+                            <input type="number" id="people" name="people" min="1" placeholder="Must be greater than 0" />
+                            <span class="error-msg" id="peopleError"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="special">Special Requests (optional):</label>
+                            <input type="text" id="special" name="special" placeholder="Any dietary needs, seating preferences, etc." />
+                        </div>
+
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Deposit Payment</legend>
+
+                        <div class="form-group">
+                            <label>Deposit Amount:</label>
+                            <p id="depositDisplay" class="deposit-display">Select a restaurant to see the deposit amount.</p>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="paymentMethod">Payment Method:</label>
+                            <select id="paymentMethod" name="paymentMethod" onchange="togglePaymentFields()">
+                                <option value="">Select one</option>
+                                <option value="voucher">Voucher</option>
+                                <option value="online">Online Payment</option>
+                            </select>
+                            <span class="error-msg" id="paymentMethodError"></span>
+                        </div>
+
+                        <!-- voucher field - shown only if voucher selected -->
+                        <div class="form-group hidden" id="voucherGroup">
+                            <label for="voucherCode">Voucher Code:</label>
+                            <input type="text" id="voucherCode" name="voucherCode" placeholder="12-digit voucher code" maxlength="12" />
+                            <span class="error-msg" id="voucherError"></span>
+                        </div>
+
+                        <!-- credit card fields - shown only if online payment selected -->
+                        <div class="form-group hidden" id="cardGroup">
+                            <label for="cardType">Card Type:</label>
+                            <select id="cardType" name="cardType" onchange="updateCardHint()">
+                                <option value="">Select card type</option>
+                                <option value="visa">Visa (16 digits)</option>
+                                <option value="mastercard">Mastercard (16 digits)</option>
+                                <option value="amex">Amex (15 digits)</option>
+                            </select>
+                            <span class="error-msg" id="cardTypeError"></span>
+                        </div>
+
+                        <div class="form-group hidden" id="cardNumberGroup">
+                            <label for="cardNumber">Card Number:</label>
+                            <input type="text" id="cardNumber" name="cardNumber" placeholder="Card number" />
+                            <span class="error-msg" id="cardNumberError"></span>
+                        </div>
+
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Billing</legend>
+
+                        <div class="form-group">
+                            <label for="billingEmail">Billing Email Address:</label>
+                            <input type="text" id="billingEmail" name="billingEmail" placeholder="Billing email" />
+                            <span class="error-msg" id="billingEmailError"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="sameEmail" onchange="copyEmail()" />
+                                Same as email address above
+                            </label>
+                        </div>
+
+                    </fieldset>
+
+                    <div class="form-group">
+                        <input type="submit" value="Confirm Reservation" id="submit-btn" />
+                    </div>
+
+                </form>
+
+            </section>
+
+        </article>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 MelbEats | Swinburne University of Technology | COS10005 Web Development</p>
+        <nav class="footer-nav">
+            <a href="index.html">Home</a> |
+            <a href="restaurants.html">Restaurants</a> |
+            <a href="recommend.html">Recommend</a> |
+            <a href="reservation.html">Reserve</a> |
+            <a href="register.html">Register</a>
+        </nav>
+    </footer>
+
+</body>
+</html>
