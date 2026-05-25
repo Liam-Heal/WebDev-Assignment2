@@ -64,10 +64,10 @@ Dynamic behaviour:
 
 References
 
-image1.jpg - [source]
-image2.jpg - [source]
-image3.jpg - [source]
-image4.jpg - [source]
-image5.jpg - [source]
-image6.jpg - [source]
-image7.jpg - [source]
+image1.jpg - https://www.cntraveller.com/article/melbourne-restaurants
+image2.jpg - https://www.tripadvisor.com/Restaurant_Review-g255100-d10198460-Reviews-Sushi_Hub_Swanston-Melbourne_Victoria.html
+image3.jpg - https://medium.com/@rakesh.indiacreatives/best-butter-chicken-in-melbourne-31795c2a7e95
+image4.jpg - https://www.thegreenbowl.com.au/
+image5.jpg - https://www.ivanhoetavern.com.au/grill/
+image6.jpg - https://sitchu.com.au/melbourne/restaurants/best-pho-melbourne
+image7.jpg - https://www.tripadvisor.com.au/Restaurant_Review-g2091978-d15604939-Reviews-Piccolino_Woodfired_Pizza_Homemade_Pasta_Italian_Restaurant-North_Fitzroy_Yarra.html
